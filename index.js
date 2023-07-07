@@ -64,7 +64,7 @@ app.use(function (req, res) {
     return res.type('txt').send('Not found');
 });
 
-app.listen(3002, (() => { console.log("Server started at : 3002") }))
+app.listen(3001, (() => { console.log("Server started at : 3002") }))
 
 process.on("uncaughtException", console.error)
 process.on("unhandledRejection", console.error)

@@ -5,7 +5,7 @@ My personal website, using express, handlebars, and other packages.
 If you find any errors and feel up to the task of fixing them, create a PR, else create and issue
 
 # Translation
-Find an error (it was translated using AI) or want to add more languages?
+Find an error or want to add more languages?
 
 ```
 1. Fork this repo
