@@ -7,10 +7,7 @@ const app = express()
 app.use("/api", require("./backend"))
 
 app.engine('handlebars', require('express-handlebars').engine({
-    defaultLayout: 'main', layoutsDir: __dirname + '/frontend/layouts/', partialsDir: __dirname + '/frontend/partials/', helpers: {
-        discordData() { return global.discordData; },
-        getByProperty(arr, idx, prop) { return arr[idx][prop]; }
-    }
+    defaultLayout: 'main', layoutsDir: __dirname + '/frontend/layouts/', partialsDir: __dirname + '/frontend/partials/'
 }));
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/frontend/views');
@@ -69,8 +66,6 @@ app.listen(3001, (() => { console.log("Server started at : 3002") }))
 process.on("uncaughtException", console.error)
 process.on("unhandledRejection", console.error)
 process.on("warning", console.warn)
-
-new (require("./nametag"))("wss://nametag.kathut.de", "811770910624579584", data => { global.discordData = JSON.stringify(data) });
 
 function langHeader(header) {
     const languages = header.split(',');
