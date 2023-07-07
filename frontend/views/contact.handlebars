@@ -1,0 +1,27 @@
+<h1>{{ lang.contact.title }}</h1>
+<p id="time">It's currently 00:00:00, I'm probably _____.</p>
+<h4>
+    <p>{{ lang.contact.email }} <a href="" id="email">Please enable JavaScript</a>.</p>
+</h4>
+<script>
+    let encryptedData = '';
+    const encryption = { key: "ZENIT.H@-_.net/mein!", decry: "     u)4po\u0003\u000c>\u0010@\u00198\u0000\u0000" }
+
+    setInterval((() => {
+        const time = new Date().toLocaleString('en-DE', { timeZone: 'America/New_York' }).split(", ")[1]
+
+        const timeArr = time.split(":")
+
+        const hours = parseInt(timeArr[0])
+
+        document.getElementById("time").innerHTML = `{{ lang.contact.itsCurr }} ${time}, {{ lang.contact.imProb }} ${hours >= 0 && hours <= 6 ? "{{ lang.contact.asleep }}" : "{{ lang.contact.awake }}"}.`
+    }), 1e3)
+
+    for (let i = 0; i < encryption.decry.length; i++) {
+        const charCode = encryption.decry.charCodeAt(i) ^ encryption.key.charCodeAt(i % encryption.key.length);
+        encryptedData += String.fromCharCode(charCode);
+    }
+
+    document.getElementById("email").innerText = encryptedData
+    document.getElementById("email").setAttribute("href", `mailto:${encryptedData}`)
+</script>
