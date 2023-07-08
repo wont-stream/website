@@ -9,7 +9,7 @@ Find an error or want to add more languages?
 
 ```
 1. Fork this repo
-2. Create a file at backend/i18n/translations/[localcode].js
+2. Create a file at backend/i18n/translations/[locale-code].js
 3. Copy the contents of another translation file and paste it in your new file
 4. Translate away!
 5. Go to backend/i18n/index.js
