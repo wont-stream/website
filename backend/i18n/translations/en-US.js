@@ -4,6 +4,7 @@ module.exports = {
         about: "About",
         links: "Links",
         contact: "Contact",
+        stream: "Stream"
     },
 
     notFound: {
