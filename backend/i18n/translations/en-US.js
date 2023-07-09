@@ -4,7 +4,6 @@ module.exports = {
         about: "About",
         links: "Links",
         contact: "Contact",
-        discord: "Discord"
     },
 
     notFound: {
@@ -43,5 +42,12 @@ module.exports = {
 
         desc1: "I'm a full-stack developer with a love for many things.",
         desc2: "Check out the other pages to learn more about me."
+    },
+
+    links: {
+        title: "Zenith's Links",
+
+        gitea: "View all my projects on my",
+        owncast: "Watch me stream games and code on my"
     }
 };
