@@ -13,22 +13,22 @@ module.exports = {
     },
 
     about: {
-        isA: "Zenith is a...",
+        isA: "Katze is a...",
 
         developer: "Developer",
         streamer: "Streamer",
         gamer: "Gamer",
 
-        isSkilled: "Zenith is skilled in...",
+        isSkilled: "Katze is skilled in...",
 
-        worksWith: "Zenith works with...",
+        worksWith: "Katze works with...",
 
         frontend: "Frontend",
         backend: "Backend"
     },
 
     contact: {
-        title: "Contact Zenith",
+        title: "Contact Katze",
 
         email: "You can email me @",
 
@@ -39,14 +39,14 @@ module.exports = {
     },
 
     index: {
-        title: "Welcome to Zenith's Website.",
+        title: "Welcome to Katze's Website.",
 
         desc1: "I'm a full-stack developer with a love for many things.",
         desc2: "Check out the other pages to learn more about me."
     },
 
     links: {
-        title: "Zenith's Links",
+        title: "Katze's Links",
 
         gitea: "View all my projects on my",
     }
