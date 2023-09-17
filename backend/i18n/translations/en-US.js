@@ -49,6 +49,5 @@ module.exports = {
         title: "Zenith's Links",
 
         gitea: "View all my projects on my",
-        owncast: "Watch me stream games and code on my"
     }
 };
