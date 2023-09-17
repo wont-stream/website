@@ -48,6 +48,6 @@ module.exports = {
     links: {
         title: "Katze's Links",
 
-        gitea: "View all my projects on my",
+        github: "View all my projects on my",
     }
 };
