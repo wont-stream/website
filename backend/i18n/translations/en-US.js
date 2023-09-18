@@ -41,7 +41,7 @@ module.exports = {
     index: {
         title: "Welcome to Katze's Website.",
 
-        desc1: "I'm a full-stack developer with a love for many things.",
+        desc1: "A full-stack developer with a love for many things, including clicking.",
         desc2: "Check out the other pages to learn more about me."
     },
 

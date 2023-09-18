@@ -38,7 +38,6 @@ require("fs").readdirSync(`${__dirname}/frontend/views`).forEach(fileName => {
     fileName = fileName.replace(".handlebars", "")
     app.get(`${fileName == "index" ? "/" : `/${fileName}`}`, function (req, res) {
         res.render(fileName, {
-            arcWidget: req.header('Sec-GPC') !== "1" || req.header("DNT") !== "1",
             lang: req.lang
         });
     });
