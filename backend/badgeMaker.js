@@ -22,10 +22,10 @@ module.exports = (app) => {
         } = req.query
         res.setHeader("content-type", "image/svg+xml")
         res.send(makeBadge(getLogo({
-            label: label || '',
+            label,
             message: message || '',
-            labelColor: labelColor || 'grey',
-            color: color || 'lightgrey',
+            labelColor,
+            color,
             style: style || 'flat',
             links: [linkLeft || "https://katze.click", linkRight || "https://github.com/de-katze/website"]
         }, logo || "", logoColor)))
