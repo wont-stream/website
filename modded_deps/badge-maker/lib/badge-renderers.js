@@ -155,7 +155,7 @@ function renderBadge(
   const width = leftWidth + rightWidth
   const leftLink = escapeXml(links[0])
 
-  return `<!-- https://kathut.de -->
+  return `<!-- https://katze.click -->
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" ${renderAriaAttributes(
     { links, accessibleText }
   )}>

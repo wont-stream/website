@@ -27,7 +27,7 @@ module.exports = (app) => {
             labelColor: labelColor || 'grey',
             color: color || 'lightgrey',
             style: style || 'flat',
-            links: [linkLeft || "https://kathut.de", linkRight || "https://github.com/KathutCo/website"]
+            links: [linkLeft || "https://katze.click", linkRight || "https://github.com/de-katze/website"]
         }, logo || "", logoColor)))
     })
 
