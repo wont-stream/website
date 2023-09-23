@@ -24,8 +24,8 @@ module.exports = (app) => {
         res.send(makeBadge(getLogo({
             label,
             message: message || '',
-            labelColor,
-            color,
+            labelColor: labelColor || 'grey',
+            color: color || 'lightgrey',
             style: style || 'flat',
             links: [linkLeft || "https://katze.click", linkRight || "https://github.com/de-katze/website"]
         }, logo || "", logoColor)))
