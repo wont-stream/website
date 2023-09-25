@@ -1,0 +1,84 @@
+:root {
+  --ICON-color: #b9bbbe;
+}
+
+i.icon {
+  color: var(--ICON-color);
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  width: var(--size);
+  height: var(--size);
+}
+i.icon path {
+  fill: currentColor;
+}
+i.icon.size-half {
+  --size: 15px;
+}
+i.icon.size-1, i.icon {
+  --size: 25px;
+}
+i.icon.size-2 {
+  --size: 50px;
+}
+i.icon.size-3 {
+  --size: 75px;
+}
+i.icon.settings {
+  -webkit-mask-image: url(../icons/cog.svg);
+  mask-image: url(../icons/cog.svg);
+}
+i.icon.voice-chat {
+  -webkit-mask-image: url(../icons/volume-up.svg);
+  mask-image: url(../icons/volume-up.svg);
+}
+i.icon.chevron-down {
+  -webkit-mask-image: url(../icons/chevron-down.svg);
+  mask-image: url(../icons/chevron-down.svg);
+}
+i.icon.mobile-alt {
+  -webkit-mask-image: url(../icons/mobile-alt.svg);
+  mask-image: url(../icons/mobile-alt.svg);
+}
+i.icon.check {
+  -webkit-mask-image: url(../icons/check.svg);
+  mask-image: url(../icons/check.svg);
+}
+i.icon.times {
+  -webkit-mask-image: url(../icons/times.svg);
+  mask-image: url(../icons/times.svg);
+}
+i.icon.slash {
+  -webkit-mask-image: url(../icons/slash.svg);
+  mask-image: url(../icons/slash.svg);
+}
+i.icon.hashtag {
+  -webkit-mask-image: url(../icons/hashtag.svg);
+  mask-image: url(../icons/hashtag.svg);
+}
+i.icon.plus {
+  -webkit-mask-image: url(../icons/plus.svg);
+  mask-image: url(../icons/plus.svg);
+}
+i.icon.compass {
+  -webkit-mask-image: url(../icons/compass.svg);
+  mask-image: url(../icons/compass.svg);
+}
+i.icon.certificate {
+  -webkit-mask-image: url(../icons/certificate.svg);
+  mask-image: url(../icons/certificate.svg);
+}
+i.icon.trash-alt {
+  -webkit-mask-image: url(../icons/trash-alt.svg);
+  mask-image: url(../icons/trash-alt.svg);
+}
+i.icon.exclamation-circle {
+  -webkit-mask-image: url(../icons/exclamation-circle.svg);
+  mask-image: url(../icons/exclamation-circle.svg);
+}
+
+/*# sourceMappingURL=icons.css.map */

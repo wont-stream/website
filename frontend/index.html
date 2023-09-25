@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <title>Katze</title>
+</head>
+
+<body class="main modal-background">
+    <div class="modal" id="modal">
+        <span class="close-wrapper">
+            <span class="close" onclick="closeModal()">
+                <i class="icon times"></i>
+            </span>
+            <span class="text title">ESC</span>
+        </span>
+        <div id="content"></div>
+    </div>
+    <p class="text headline">Welcome to Katze&#x27;s Website.</p>
+    <br>
+    <p class="text default">A full-stack developer with a love for many things, including clicking.</p>
+    <p class="text default">Check out the other pages to learn more about me.</p>
+
+    <br><br>
+
+    <button class="button primary" id="about" onclick="openModal(this.id)">About Me</button>
+    <br>
+    <button class="button primary" id="info" onclick="openModal(this.id)">Other Info</button>
+    <script src="index.js"></script>
+</body>
+
+</html>
