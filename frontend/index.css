@@ -32,3 +32,25 @@ body {
 .modal {
     padding: 20px;
 }
+
+img {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+.indicator {
+    position: relative;
+    bottom: 1.25rem;
+    left: 1rem;
+}
+
+video {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

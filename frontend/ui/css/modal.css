@@ -12,16 +12,13 @@
   height: 100%;
   opacity: 0;
   transition: all ease 0.2s;
-  -webkit-transform: translateZ(0);
   background: var(--background-primary);
-  transform: scale(0.93);
   display: flex;
   z-index: 1;
 }
 .modal.open {
   visibility: visible;
   opacity: 1;
-  transform: scale(calc(1 + var(--modal-scale)));
   margin: 0;
 }
 .modal .sidebar {
