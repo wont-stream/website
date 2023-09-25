@@ -34,6 +34,11 @@ Sleep Deprived
 Good Enough
 Functional
 Cat Lover">
+
+<script>
+    /*to prevent Firefox FOUC, this must be here*/
+    let FF_FOUC_FIX;
+  </script>
 </head>
 
 <body class="main modal-background modal-open">
@@ -62,7 +67,7 @@ Cat Lover">
 
     <button class="button primary" id="about" onclick="openModal(this.id)">About Me</button>
     <br>
-    <button class="button primary" id="info" onclick="openModal(this.id)">Other Info</button>
+    <button class="button primary" id="info" onclick="openModal(this.id)" style="margin-top: 10px;">Other Info</button>
     
     <script src="index.js" type="module"></script>
 </body>
