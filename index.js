@@ -1,6 +1,5 @@
 // Requires
 const express = require("express")
-const i18n = require("./backend/i18n")
 
 // Setup
 const app = express()
