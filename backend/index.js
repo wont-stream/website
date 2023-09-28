@@ -6,5 +6,6 @@ require("./badgeMaker")(router)
 require("./cat")(router)
 require("./headers")(router)
 require("./embed")(router)
+require("./discord")(router)
 
 module.exports = router;
