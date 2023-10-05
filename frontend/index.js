@@ -1,5 +1,3 @@
-fetch("https://a.katze.click/_");
-
 import './js/loading.js';
 import './js/discord.js';
 
