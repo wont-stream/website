@@ -1,0 +1,18 @@
+[
+    {
+        "url": "mining.svg",
+        "text": "Uh oh, you followed wumpus and got lost in the mines."
+    },
+    {
+        "url": "mountain.svg",
+        "text": "There seems to be no service, Wumpus' GPS stopped working."
+    },
+    {
+        "url": "sleeping.svg",
+        "text": "It's best if you come back later, there's nothing here."
+    },
+    {
+        "url": "tea_party.svg",
+        "text": "Someone spilt the tea, come back after Wumpus cleans up."
+    }
+]
