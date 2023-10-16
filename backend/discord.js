@@ -9,7 +9,7 @@ module.exports = (app) => {
     })
 
     app.get("/Discord.Stable.ipa", async ({ res }) => {
-        const resp = await fetch("https://ipa.aspy.dev/discord/testflight/")
+        const resp = await fetch("https://ipa.aspy.dev/discord/stable/")
         const data = await resp.text()
 
         const arr = data.match(/\.\/[^/]+\.ipa/g)
