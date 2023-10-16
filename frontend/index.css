@@ -19,7 +19,7 @@ body {
     padding: 20px;
 }
 
-#content {
+#about:not(button), #info:not(button) {
     width: 100%;
     height: 100%;
     text-align: center;

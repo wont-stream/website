@@ -1,3 +1,4 @@
+window.indicator = false;
 let ws = new WebSocket("wss://api.lanyard.rest/socket")
 
 ws.onmessage = ({data}) => {
@@ -22,7 +23,7 @@ ws.onmessage = ({data}) => {
                 ws.send(JSON.stringify({
                     op: 3
                 }))
-            }, d.heartbeat_interval)
+            }, d.heartbeat_interval /2)
 
             ws.send(JSON.stringify({
                 op: 2,
@@ -42,4 +43,5 @@ const update = (data) => {
     const { discord_status } = data
 
     indicator.classList = `indicator ${discord_status == "idle" ? "afk" : discord_status}`
+    window.indicator = true;
 }
