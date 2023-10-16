@@ -1,33 +1,41 @@
-// Requires
-const express = require("express")
+import './js/loading.js';
+import './js/discord.js';
 
-// Setup
-const app = express()
-app.use("/api", require("./backend"))
+const main = document.body
+const modal = document.getElementById("modal");
+const time = document.getElementById("time");
 
-// serve all files using express.static
-app.use(express.static('frontend'));
-app.enable('view cache');
+const pages = ["about", "info"]
 
-app.use(function (req, res) {
-    res.status(404);
+window.openModal = async (id) => {
+    document.getElementById(id).style.display = ""
 
-    // Respond with HTML page
-    if (req.accepts('html')) {
-        return res.redirect("/");
-    }
+    main.classList.add("modal-open");
+    modal.classList.add("open");
+}
 
-    // Respond with JSON
-    if (req.accepts('json')) {
-        return res.send({ error: 'Not found' });
-    }
+window.closeModal = () => {
+    modal.classList.remove("open");
+    main.classList.remove("modal-open");
 
-    // Default to plain-text. send()
-    return res.type('txt').send('Not found');
+    setTimeout(() => {
+        pages.forEach(id => {
+            document.getElementById(id).style.display = "none"
+        })
+    }, 300)
+}
+
+window.addEventListener("keydown", (event) => {
+    if (event.code !== "Escape") return;
+    closeModal();
 });
 
-app.listen(3001, (() => { console.log("Server started at : 3001") }))
+const timeFunc = () => {
+    const currentTime = new Date().toLocaleString("en-DE", { timeZone: "America/New_York" }).split(", ")[1].split(":");
+    const hours = parseInt(currentTime[0]);
+    const status = hours >= 0 && hours <= 6 ? "asleep" : "awake";
 
-process.on("uncaughtException", console.error)
-process.on("unhandledRejection", console.error)
-process.on("warning", console.warn)
+    time.innerHTML = `It's currently ${hours}:${currentTime[1]}, I'm probably ${status}.`;
+}
+
+timeFunc()

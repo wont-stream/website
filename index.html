@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <title>Katze</title>
+    <link type="application/json+oembed" href="https://katze.click/oembed.json">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta name="theme-color" content="#2b2d31">
+    <meta name="og:image" content="https://api.lanyard.rest/1125315673829154837.png">
+    <meta name="twitter:image" content="https://api.lanyard.rest/1125315673829154837.png">
+    <meta property="og:description" content="Full-Stack Developer
+Somewhat Gamer
+Sleep Deprived
+Good Enough
+Functional
+Cat Lover">
+    <meta name="description" content="Full-Stack Developer
+Somewhat Gamer
+Sleep Deprived
+Good Enough
+Functional
+Cat Lover">
+    <meta property="twitter:description" content="Full-Stack Developer
+Somewhat Gamer
+Sleep Deprived
+Good Enough
+Functional
+Cat Lover">
+
+    <script>
+        /*to prevent Firefox FOUC, this must be here*/
+        let FF_FOUC_FIX;
+    </script>
+</head>
+
+<body class="main modal-background modal-open">
+    <div class="modal open" id="loading">
+        <noscript>
+            <p class="text headline">You need to enable JavaScript to use this website.</p>
+        </noscript>
+    </div>
+
+    <div class="modal" id="modal">
+        <span class="close-wrapper">
+            <span class="close" onclick="closeModal()">
+                <i class="icon times"></i>
+            </span>
+            <span class="text title">ESC</span>
+        </span>
+
+        <br><br>
+
+        <span id="about" style="display: none">
+            <p class="text headline">About Me</p>
+            <br>
+            <p class="text default">I'm a Full-Stack Developer</p>
+            <p class="text default">I'm a Part-Time Gamer</p>
+            <p class="text default"><small>and</small></p>
+            <p class="text default">I'm Sleep Deprived</p>
+            <br><br>
+            <p class="text headline">A little background</p>
+            <br>
+            <p class="text default">I've always had a thing for computers ever since I could rememer, not just any part
+                of computers though.</p>
+            <p class="text default">It's always been the software part of computers that I have been attached to.</p>
+            <p class="text default">So here I am, working with Frontends and Backends almost every day.</p>
+            <p class="text default">I'm not overly fancy so I stick with</p>
+            <br>
+            <center>
+                <ul class="list">
+                    <li class="text title">Backend</li>
+                    <li class="separator"></li>
+                    <li class="item">NodeJS</li>
+                    <li class="text title">Frontend</li>
+                    <li class="separator"></li>
+                    <li class="item">HTML</li>
+                    <li class="item">CSS</li>
+                    <li class="item">JS</li>
+                    <li class="separator"></li>
+                </ul>
+            </center>
+            <br>
+            <p class="text default">I currently have two little fluf balls, my cats <small>Gizmo & Gadget</small>.</p>
+        </span>
+
+        <span id="info" style="display: none">
+            <p class="text headline">Links and Contact</p>
+            <p class="text default"><small id="time"></small></p>
+            <br>
+            <p class="text default">I don't have much here, as it's easier to manage less.</p>
+            <p class="text default">But you can view my projects on <a class="text link"
+                    href="https://github.com/de-katze">GitHub</a></p>
+            <p class="text default">And you can contact me on <a class="text link"
+                    href="https://discord.com/users/1125315673829154837">Discord</a></p>
+        </span>
+    </div>
+
+    <img src="./assets/oreo.webp" alt="">
+    <span class="indicator offline" id="indicator"></span>
+    <p class="text headline">Welcome to Katze&#x27;s Website.</p>
+    <br>
+    <p class="text default">A full-stack developer with a love for many things, including clicking.</p>
+    <p class="text default">Check out the other pages to learn more about me.</p>
+
+    <br><br>
+
+    <button class="button primary" id="about" onclick="openModal(this.id)">About Me</button>
+    <br>
+    <button class="button primary" id="info" onclick="openModal(this.id)" style="margin-top: 10px;">Other Info</button>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
