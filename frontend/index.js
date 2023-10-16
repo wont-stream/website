@@ -39,12 +39,3 @@ const timeFunc = () => {
 }
 
 timeFunc()
-
-(() => {
-    const now = new Date();
-    
-    setTimeout(function() {
-        timeFunc();
-        setInterval(timeFunc, 60000); // Repeat every 1 minute
-    }, 60000 - (now.getSeconds() * 1000) - now.getMilliseconds());
-})()
