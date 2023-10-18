@@ -40,5 +40,3 @@ window.addEventListener("resize", setFontSize);
 
 // Call the function initially to set the font size when the page loads
 setFontSize();
-
-alert(1)
