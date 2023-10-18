@@ -1,41 +1,44 @@
-import './js/loading.js';
-import './js/discord.js';
-
-const main = document.body
-const modal = document.getElementById("modal");
-const time = document.getElementById("time");
-
-const pages = ["about", "info"]
-
-window.openModal = async (id) => {
-    document.getElementById(id).style.display = ""
-
-    main.classList.add("modal-open");
-    modal.classList.add("open");
-}
-
-window.closeModal = () => {
-    modal.classList.remove("open");
-    main.classList.remove("modal-open");
-
-    setTimeout(() => {
-        pages.forEach(id => {
-            document.getElementById(id).style.display = "none"
-        })
-    }, 300)
-}
-
-window.addEventListener("keydown", (event) => {
-    if (event.code !== "Escape") return;
-    closeModal();
-});
+const time = document.getElementById("time")
+const timeStatus = document.getElementById("status")
 
 const timeFunc = () => {
     const currentTime = new Date().toLocaleString("en-DE", { timeZone: "America/New_York" }).split(", ")[1].split(":");
     const hours = parseInt(currentTime[0]);
-    const status = hours >= 0 && hours <= 6 ? "asleep" : "awake";
 
-    time.innerHTML = `It's currently ${hours}:${currentTime[1]}, I'm probably ${status}.`;
+    time.innerHTML = `${hours}:${currentTime[1]}:${currentTime[2]}`;
+    timeStatus.innerHTML = hours >= 0 && hours <= 6 ? "asleep" : "awake";
 }
 
 timeFunc()
+
+setInterval(timeFunc, 1000)
+
+document.addEventListener('scroll', () => {
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (window.scrollY / scrollHeight) * 100;
+    document.getElementById('myBar').style.width = scrolled + '%';
+});
+
+// JavaScript
+function setFontSize() {
+    // Get the window's inner width and height
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+    
+    // Calculate the smaller dimension (either width or height)
+    var minDimension = Math.min(windowWidth, windowHeight);
+    
+    // Calculate the desired font size based on the smaller dimension
+    var fontSize = minDimension * 0.023; // You can adjust the multiplier (0.02) to fit your design
+    
+    // Set the font size of the body element
+    document.body.style.fontSize = fontSize + "px";
+}
+
+// Call the function when the window is resized
+window.addEventListener("resize", setFontSize);
+
+// Call the function initially to set the font size when the page loads
+setFontSize();
+
+alert(1)

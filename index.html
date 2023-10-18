@@ -41,82 +41,48 @@ Cat Lover">
     </script>
 </head>
 
-<body class="main modal-background modal-open">
-    <div class="modal open" id="loading">
-        <noscript>
-            <p class="text headline">You need to enable JavaScript to use this website.</p>
-        </noscript>
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
     </div>
 
-    <div class="modal" id="modal">
-        <span class="close-wrapper">
-            <span class="close" onclick="closeModal()">
-                <i class="icon times"></i>
-            </span>
-            <span class="text title">ESC</span>
-        </span>
 
-        <br><br>
+    <section class="bento-boxes">
+        <div class="bento-box">
+            <h2>Katze</h2>
+            <img src="./assets/oreo.webp" width="64px" alt="Teriyaki Chicken Bento">
+            <p>A Full-Stack Developer</p>
+            <p>A Part-Time Gamer</p>
+            <p>And Somewhat Sleep Deprived</p>
+        </div>
 
-        <span id="about" style="display: none">
-            <p class="text headline">About Me</p>
-            <br>
-            <p class="text default">I'm a Full-Stack Developer</p>
-            <p class="text default">I'm a Part-Time Gamer</p>
-            <p class="text default"><small>and</small></p>
-            <p class="text default">I'm Sleep Deprived</p>
-            <br><br>
-            <p class="text headline">A little background</p>
-            <br>
-            <p class="text default">I've always had a thing for computers ever since I could rememer, not just any part
-                of computers though.</p>
-            <p class="text default">It's always been the software part of computers that I have been attached to.</p>
-            <p class="text default">So here I am, working with Frontends and Backends almost every day.</p>
-            <p class="text default">I'm not overly fancy so I stick with</p>
-            <br>
-            <center>
-                <ul class="list">
-                    <li class="text title">Backend</li>
-                    <li class="separator"></li>
-                    <li class="item">NodeJS</li>
-                    <li class="text title">Frontend</li>
-                    <li class="separator"></li>
-                    <li class="item">HTML</li>
-                    <li class="item">CSS</li>
-                    <li class="item">JS</li>
-                    <li class="separator"></li>
-                </ul>
-            </center>
-            <br>
-            <p class="text default">I currently have two little fluf balls, my cats <small>Gizmo & Gadget</small>.</p>
-        </span>
+        <div class="bento-box">
+            <h2>Some background</h2>
+            <p>I've always had a thing for computers ever since I could rememer, not just any part of computers though.
+            </p>
+            <p>It's always been the software part of computers that I have been attached to.</p>
+            <p>So here I am, working with Frontends and Backends almost every day.</p>
+        </div>
 
-        <span id="info" style="display: none">
-            <p class="text headline">Links and Contact</p>
-            <p class="text default"><small id="time"></small></p>
-            <br>
-            <p class="text default">I don't have much here, as it's easier to manage less.</p>
-            <p class="text default">But you can view my projects on <a class="text link"
-                    href="https://github.com/de-katze">GitHub</a></p>
-            <p class="text default">And you can contact me on <a class="text link"
-                    href="https://discord.com/users/1125315673829154837">Discord</a></p>
-        </span>
-    </div>
+        <div class="bento-box">
+            <h2>What I Work With</h2>
+            <p>For the backend, I mostly use NodeJS as I'm too scared to learn other languages at the moment.</p>
+            <p>And for the frontend, I go with the classic, HTML, CSS, and JS</p>
+        </div>
 
-    <img src="./assets/oreo.webp" alt="">
-    <span class="indicator offline" id="indicator"></span>
-    <p class="text headline">Welcome to Katze&#x27;s Website.</p>
-    <br>
-    <p class="text default">A full-stack developer with a love for many things, including clicking.</p>
-    <p class="text default">Check out the other pages to learn more about me.</p>
+        <div class="bento-box">
+            <h2>Local Time</h2>
+            <p>It is currently <span id="time">00:00:00</span> for me.</p>
+            <p>Therefore I am probably <spam id="status">asleep</spam></p>
+        </div>
 
-    <br><br>
-
-    <button class="button primary" id="about" onclick="openModal(this.id)">About Me</button>
-    <br>
-    <button class="button primary" id="info" onclick="openModal(this.id)" style="margin-top: 10px;">Other Info</button>
-
-    <script src="index.js" type="module"></script>
+        <div class="bento-box">
+            <h2>Contact</h2>
+            <p>You can find me on <a href="https://github.com/de-katze">GitHub</a>.</p>
+            <p>And I'm on <a href="https://discord.com/users/1125315673829154837">Discord</a>.</p>
+        </div>
+    </section>
+    <script src="index.js"></script>
 </body>
-
 </html>
