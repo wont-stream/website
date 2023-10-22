@@ -8,14 +8,14 @@
     <title>Katze</title>
     <link type="application/json+oembed" href="https://katze.click/oembed.json">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets//favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets//favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets//favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
     <meta name="theme-color" content="#2b2d31">
-    <meta name="og:image" content="https://api.lanyard.rest/1125315673829154837.png">
-    <meta name="twitter:image" content="https://api.lanyard.rest/1125315673829154837.png">
+    <meta name="og:image" content="/assets//favicon/apple-touch-icon.png">
+    <meta name="twitter:image" content="/assets//favicon/apple-touch-icon.png">
     <meta property="og:description" content="Full-Stack Developer
 Somewhat Gamer
 Sleep Deprived
@@ -42,15 +42,8 @@ Cat Lover">
 </head>
 
 <body>
-
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-    </div>
-
-
     <section class="bento-boxes">
         <div class="bento-box">
-            <h2>Katze</h2>
             <img src="./assets/oreo.webp" width="64px" alt="Teriyaki Chicken Bento">
             <p>A Full-Stack Developer</p>
             <p>A Part-Time Gamer</p>
@@ -73,9 +66,16 @@ Cat Lover">
 
         <div class="bento-box">
             <h2>Local Time</h2>
-            <p>It is currently <span id="time">00:00:00</span> for me.</p>
+            <p>It is currently <span id="hr"></span><span id="min"></span><span id="sec"></span> for me.</p>
             <p>Therefore I am probably <spam id="status">asleep</spam></p>
         </div>
+
+        <div class="bento-box">
+            <h2>Heartrate</h2>
+            <p id="heartrate"></p>
+            <p id="avgheartrate"></p>
+        </div>
+
 
         <div class="bento-box">
             <h2>Contact</h2>
@@ -83,6 +83,6 @@ Cat Lover">
             <p>And I'm on <a href="https://discord.com/users/1125315673829154837">Discord</a>.</p>
         </div>
     </section>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My personal website, static, and [hopping](https://hop.io). # Contributing If you find any errors and feel up to the task of fixing them, create a PR, else create and issue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "countup.js": "^2.8.0"
+  }
+}

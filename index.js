@@ -1,44 +1,43 @@
-(() => {
-    const time = document.getElementById("time")
-    const timeStatus = document.getElementById("status")
+import { CountUp } from './node_modules/countup.js/dist/countUp.min.js';
 
-    const timeFunc = () => {
-        const currentTime = new Date().toLocaleString("en-DE", { timeZone: "America/New_York" }).split(", ")[1].split(":");
-        const hours = parseInt(currentTime[0]);
+const hyperheart = new WebSocket("wss://hyperheart.katze.click/");
+const timeStatus = document.getElementById("status");
+let numbers = [];
 
-        time.innerHTML = `${hours}:${currentTime[1]}:${currentTime[2]}`;
-        timeStatus.innerHTML = hours >= 0 && hours <= 6 ? "asleep" : "awake";
-    }
+const heart = new CountUp('heartrate', 0, {
+    prefix: 'My heartrate is currently at ',
+    suffix: ' BPM'
+})
+heart.start()
 
-    timeFunc()
+const avgheart = new CountUp('avgheartrate', 0, {
+    prefix: 'My average heartrate is ',
+    suffix: ' BPM'
+})
+avgheart.start()
 
-    setInterval(timeFunc, 1000)
+const hour = new CountUp('hr', 0, { suffix: ':' })
+hour.start()
+const min = new CountUp('min', 0, { suffix: ':' })
+min.start()
+const sec = new CountUp('sec', 0);
 
-    document.addEventListener('scroll', () => {
-        var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (window.scrollY / scrollHeight) * 100;
-        document.getElementById('myBar').style.width = scrolled + '%';
-    });
+const updateClock = () => {
+    const currentTime = new Date().toLocaleString("en-DE", { timeZone: "America/New_York" }).split(", ")[1].split(":");
+    const hours = parseInt(currentTime[0]);
 
-    // JavaScript
-    function setFontSize() {
-        // Get the window's inner width and height
-        var windowWidth = window.innerWidth;
-        var windowHeight = window.innerHeight;
+    hour.update(hours);
+    min.update(currentTime[1]);
+    sec.update(currentTime[2]);
 
-        // Calculate the smaller dimension (either width or height)
-        var minDimension = Math.min(windowWidth, windowHeight);
+    timeStatus.innerHTML = hours >= 0 && hours <= 6 ? "asleep" : "awake";
+};
 
-        // Calculate the desired font size based on the smaller dimension
-        var fontSize = minDimension * 0.023; // You can adjust the multiplier (0.02) to fit your design
+setInterval(updateClock, 1000);
 
-        // Set the font size of the body element
-        document.body.style.fontSize = fontSize + "px";
-    }
-
-    // Call the function when the window is resized
-    window.addEventListener("resize", setFontSize);
-
-    // Call the function initially to set the font size when the page loads
-    setFontSize();
-})()
+hyperheart.onmessage = ({ data }) => {
+    const heartRate = JSON.parse(data).hr;
+    numbers.push(heartRate);
+    heart.update(heartRate);
+    avgheart.update(Math.floor((numbers.reduce((acc, num) => acc + num, 0)) / numbers.length))
+};
