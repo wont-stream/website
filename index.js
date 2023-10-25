@@ -1,43 +1,41 @@
-import { CountUp } from './node_modules/countup.js/dist/countUp.min.js';
+import AnimatedCursor from './node_modules/animated-cursor/dist/index.modern.js';
 
 const hyperheart = new WebSocket("wss://hyperheart.katze.click/");
+const time = document.getElementById("time");
 const timeStatus = document.getElementById("status");
-let numbers = [];
-
-const heart = new CountUp('heartrate', 0, {
-    prefix: 'My heartrate is currently at ',
-    suffix: ' BPM'
-})
-heart.start()
-
-const avgheart = new CountUp('avgheartrate', 0, {
-    prefix: 'My average heartrate is ',
-    suffix: ' BPM'
-})
-avgheart.start()
-
-const hour = new CountUp('hr', 0, { suffix: ':' })
-hour.start()
-const min = new CountUp('min', 0, { suffix: ':' })
-min.start()
-const sec = new CountUp('sec', 0);
+const hr = document.getElementById("hr");
+const avgHr = document.getElementById("avg-hr");
+const numbers = [];
 
 const updateClock = () => {
     const currentTime = new Date().toLocaleString("en-DE", { timeZone: "America/New_York" }).split(", ")[1].split(":");
-    const hours = parseInt(currentTime[0]);
 
-    hour.update(hours);
-    min.update(currentTime[1]);
-    sec.update(currentTime[2]);
-
-    timeStatus.innerHTML = hours >= 0 && hours <= 6 ? "asleep" : "awake";
+    time.innerText = `${currentTime[0]}:${currentTime[1]}:${currentTime[2]}`
+    timeStatus.innerText = currentTime[0] >= 0 && currentTime[0] <= 6 ? "asleep" : "awake";
 };
-
+updateClock()
 setInterval(updateClock, 1000);
 
 hyperheart.onmessage = ({ data }) => {
     const heartRate = JSON.parse(data).hr;
     numbers.push(heartRate);
-    heart.update(heartRate);
-    avgheart.update(Math.floor((numbers.reduce((acc, num) => acc + num, 0)) / numbers.length))
+    hr.innerText = heartRate
+    avgHr.innerText = Math.floor(numbers.reduce((acc, num) => acc + num, 0) / numbers.length);
 };
+
+AnimatedCursor({
+    color: '#FFFFFF',
+    outerAlpha: 0.1,
+    size: {
+        inner: 4,
+        outer: 24
+    },
+    hoverScale: {
+        inner: 0.5,
+        outer: 1.4
+    },
+    clickScale: {
+        inner: 1.5,
+        outer: 0
+    }
+}).init();

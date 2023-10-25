@@ -1,3 +1,4 @@
+/* Customizing the scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -11,19 +12,13 @@
     background-color: #090909;
 }
 
+/* General styling for all elements */
 * {
     scrollbar-width: thin;
     scrollbar-color: #000000 #090909;
-
-    scrollbar-face-color: #000000;
-    scrollbar-shadow-color: #090909;
-    scrollbar-highlight-color: #090909;
-    scrollbar-3dlight-color: #090909;
-    scrollbar-darkshadow-color: #090909;
-    scrollbar-track-color: #090909;
-    scrollbar-arrow-color: #000000;
 }
 
+/* Body styling */
 body {
     font-family: sans-serif;
     margin: 0;
@@ -32,34 +27,31 @@ body {
     color: #DEDEDE;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+/* Container for bento boxes */
 .bento-boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    gap: 24px; /* Spacing between bento boxes */
 }
 
+/* Individual bento box styling */
 .bento-box {
     background-color: #090909;
     padding: 20px;
     margin-top: 12px;
-    margin-bottom: 12px;
     text-align: center;
     border-radius: 10px;
-    width: 90vw;
-    flex: auto auto auto;
+    width: 500px; /* Responsive width for bento boxes */
 }
 
-.bento-box img {
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
+/* Links styling */
 a {
     color: inherit;
+    text-decoration: none;
 }

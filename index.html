@@ -42,38 +42,45 @@ Cat Lover">
 </head>
 
 <body>
+    <div id="cursor">
+        <div id="cursor-outer"></div>
+        <div id="cursor-inner"></div>
+      </div>
+
     <section class="bento-boxes">
         <div class="bento-box">
-            <img src="./assets/oreo.webp" width="64px" alt="Teriyaki Chicken Bento">
+            <h2>Katze</h2>
             <p>A Full-Stack Developer</p>
             <p>A Part-Time Gamer</p>
-            <p>And Somewhat Sleep Deprived</p>
+            <p>and Somewhat Sleep Deprived</p>
         </div>
 
         <div class="bento-box">
             <h2>Some background</h2>
-            <p>I've always had a thing for computers ever since I could remember, not just any part of computers though.
-            </p>
-            <p>It's always been the software part of computers that I have been attached to.</p>
+            <p>I've always had a thing for computers ever since I could remember.</p>
+            <p>It's always been the software department that I have been attached to.</p>
             <p>So here I am, working with Frontends and Backends almost every day.</p>
         </div>
 
         <div class="bento-box">
             <h2>What I Work With</h2>
-            <p>For the backend, I mostly use NodeJS as I'm too scared to learn other languages at the moment.</p>
+            <p>For the backend, I mostly use NodeJS</p>
+            <p>as I'm too scared to learn other languages at the moment.</p>
             <p>And for the frontend, I go with the classic, HTML, CSS, and JS</p>
         </div>
+    </section>
 
+    <section class="bento-boxes">
         <div class="bento-box">
             <h2>Local Time</h2>
-            <p>It is currently <span id="hr"></span><span id="min"></span><span id="sec"></span> for me.</p>
+            <p>It is currently <span id=time>00:00:00</span> for me.</p>
             <p>Therefore I am probably <spam id="status">asleep</spam></p>
         </div>
 
         <div class="bento-box">
             <h2>Heartrate</h2>
-            <p id="heartrate"></p>
-            <p id="avgheartrate"></p>
+            <p>My heartrate is currently at <span id=hr>00</span> BPM</p>
+            <p title="This is calculated locally.">My average heartrate is <span id="avg-hr">00</span> BPM</p>
         </div>
 
 
@@ -81,6 +88,32 @@ Cat Lover">
             <h2>Contact</h2>
             <p>You can find me on <a href="https://github.com/de-katze">GitHub</a>.</p>
             <p>And I'm on <a href="https://discord.com/users/1125315673829154837">Discord</a>.</p>
+        </div>
+    </section>
+
+    <section class="bento-boxes">
+        <div class="bento-box">
+            <img src="https://github-readme-stats.vercel.app/api?username=de-katze&show_icons=true&theme=transparent&hide_border=true" alt="GitHub Stats" height="100%" width="100%" />
+        </div>
+
+        <div class="bento-box">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs?username=de-katze&show_icons=true&theme=transparent&hide_border=true" alt="GitHub Stats" width="60%" />
+        </div>
+
+        <div class="bento-box">
+            <img src="https://streak-stats.demolab.com?user=de-katze&theme=transparent&hide_border=true&fire=EB9344" alt="GitHub Streak" height="100%" width="100%" />
+        </div>
+    </section>
+
+    <section class="bento-boxes">
+        <div class="bento-box">
+            <img src="https://lanyard.cnrad.dev/api/1125315673829154837?bg=transparent" height="100%" width="100%" />
+        </div>
+
+        <div class="bento-box">
+            <img src="https://badger.katze.click/badge?label=Powered%20by&message=Hop&labelColor=141218&color=353040&logo=local-hop-icon&logoColor=white&linkLeft=https://hop.io&linkRight=https://github.com/hopinc" height="100%" width="100%" />
+            <br><br><br><br><br>
+            <img src="https://badger.katze.click/badge?label=Lightning&message=fast&labelColor=181712&color=403c30&logo=ft-zap&logoColor=yellow" height="100%" width="100%" />
         </div>
     </section>
     <script src="index.js" type="module"></script>
