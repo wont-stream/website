@@ -58,5 +58,7 @@
 
 # You aren't a robot, what are you doing here...
 
+
 User-Agent: *
 Allow: /
+sitemap: https://katze.click/sitemap.xml
