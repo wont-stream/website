@@ -1,5 +1,5 @@
 # website
-My personal website, static, and [hopping](https://hop.io).
+My personal website, static, and [hopping](https://hop.io/r/de_katze).
 # Contributing
 If you find any errors and feel up to the task of fixing them, create a PR, else create and issue
 
