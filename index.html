@@ -4,7 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./index.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Katze</title>
     <link type="application/json+oembed" href="https://katze.click/oembed.json">
 
@@ -45,73 +51,65 @@ Cat Lover">
     <div id="cursor">
         <div id="cursor-outer"></div>
         <div id="cursor-inner"></div>
-      </div>
+    </div>
 
-    <section class="bento-boxes">
-        <div class="bento-box">
-            <h2>Katze</h2>
-            <p>A Full-Stack Developer</p>
-            <p>A Part-Time Gamer</p>
-            <p>and Somewhat Sleep Deprived</p>
+    <div class="hero min-h-screen bg-base-200">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Meet Katze.</h1>
+                <p class="py-6">A Full-Stack Developer<br>and a Part-Time Gamer</p>
+                <a class="btn btn-primary" href="#info">Get Started</a>
+            </div>
         </div>
+    </div>
+    <div class="hero min-h-screen bg-base-200" id="info">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <div class="chat chat-start">
+                    <div class="chat-bubble">Tell me about yourself!</div>
+                </div>
+                <div class="chat chat-end">
+                    <div class="chat-bubble">I've always had a thing for computers ever since I could remember</div>
+                </div>
+                <div class="chat chat-end">
+                    <div class="chat-bubble">It's always been the software department that I have been attached to</div>
+                </div>
+                <div class="chat chat-end">
+                    <div class="chat-bubble">So here I am, working with Frontends and Backends almost every day!</div>
+                </div>
+                <div class="chat chat-start">
+                    <div class="chat-bubble">Thats cool, what do you work with?</div>
+                </div>
+                <div class="chat chat-end">
+                    <div class="chat-bubble">For the backend, I mostly use NodeJS, as I'm too scared to learn other
+                        languages at the moment.</div>
+                </div>
+                <div class="chat chat-end">
+                    <div class="chat-bubble">And for the frontend, I go with the classic, HTML, CSS, and JS</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <div class="bento-box">
-            <h2>Some background</h2>
-            <p>I've always had a thing for computers ever since I could remember.</p>
-            <p>It's always been the software department that I have been attached to.</p>
-            <p>So here I am, working with Frontends and Backends almost every day.</p>
-        </div>
-    </section>
-
-    <section class="bento-boxes">
-        <div class="bento-box">
-            <h2>What I Work With</h2>
-            <p>For the backend, I mostly use NodeJS</p>
-            <p>as I'm too scared to learn other languages at the moment.</p>
-            <p>And for the frontend, I go with the classic, HTML, CSS, and JS</p>
-        </div>
-        
-        <div class="bento-box">
-            <h2>Local Time</h2>
-            <p>It is currently <span id=time>00:00:00</span> for me.</p>
-            <p>Therefore I am probably <spam id="status">asleep</spam></p>
-        </div>
-    </section>
-
-    <section class="bento-boxes">
-        <div class="bento-box">
-            <h2>Heartrate</h2>
-            <p>My heartrate is currently at <span id=hr>00</span> BPM</p>
-            <p title="This is calculated locally.">My average heartrate is <span id="avg-hr">00</span> BPM</p>
-        </div>
-
-
-        <div class="bento-box">
-            <h2>Contact</h2>
-            <p>You can find me on <a href="https://github.com/de-katze">GitHub</a>.</p>
-            <p>And I'm on <a href="https://discord.com/users/1125315673829154837">Discord</a>.</p>
-        </div>
-    </section>
-
-    <section class="bento-boxes">
-        <div class="bento-box">
-            <img src="https://github-readme-stats.vercel.app/api?username=de-katze&show_icons=true&theme=transparent&hide_border=true" alt="GitHub Stats" height="100%" width="100%" type="image/svg+xml" />
-        </div>
-
-        <div class="bento-box">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs?username=de-katze&show_icons=true&theme=transparent&hide_border=true" alt="GitHub Stats" width="60%" type="image/svg+xml" />
-        </div>
-    </section>
-
-    <section class="bento-boxes">
-        <div class="bento-box">
-            <img src="https://streak-stats.demolab.com?user=de-katze&theme=transparent&hide_border=true&fire=EB9344" alt="GitHub Streak" height="100%" width="100%" type="image/svg+xml" />
-        </div>
-
-        <div class="bento-box">
-            <img src="https://lanyard.cnrad.dev/api/1125315673829154837?bg=transparent" height="100%" width="100%" type="image/svg+xml" />
-        </div>
-    </section>
+    <div class="btm-nav">
+        <button>
+            Local Time
+            <div class="badge" id=time>00:00:00</div>
+        </button>
+        <button>
+            Status
+            <div class="badge" id="status">asleep</div>
+        </button>
+        <button>
+            Heartrate
+            <div class="badge" id="hr">00</div>
+        </button>
+        <button>
+            Average Heartrate
+            <div class="badge" id="avg-hr">00</div>
+        </button>
+    </div>
     <script src="index.js" type="module"></script>
 </body>
+
 </html>
