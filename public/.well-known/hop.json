@@ -1,0 +1,13 @@
+{
+  "usingHop": {
+    "Server": "hop",
+    "exist": [
+      "Hop-Edge-Node",
+      "Hop-Region"
+    ]
+  },
+  "hopHeaders": [
+    "Hop-Edge-Node",
+    "Hop-Region"
+  ]
+}
