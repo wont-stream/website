@@ -6,7 +6,7 @@ const grabData = async () => {
     discord(await data.json())
 }
 
-const discord = (data) => {
+const discord = ({ data }) => {
     avatar.classList = `avatar ${data.discord_status}`
 }
 
