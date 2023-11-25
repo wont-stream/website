@@ -41,113 +41,144 @@ Cat Lover">
     </script>
 </head>
 
-<body>
-    <div id="cursor">
-        <div id="cursor-outer"></div>
-        <div id="cursor-inner"></div>
+<body id="who">
+    <div class="sticky top-0">
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="#who">Katze</a>
+            </div>
+            <div class="flex-none">
+                <div class="dropdown dropdown-end">
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar offline" id="avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component" src="./assets/favicon/apple-touch-icon.png" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Local Time
+                                <span class="badge badge-ghost"><span class="countdown">
+                                        <span id="hr" style="--value: 0;"></span>
+                                    </span>
+                                    :
+                                    <span class="countdown">
+                                        <span id="min" style="--value: 0;"></span>
+                                    </span>
+                                    :
+                                    <span class="countdown">
+                                        <span id="sec" style="--value: 0;"></span>
+                                    </span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-between">
+                                Status
+                                <span class="badge badge-ghost" id="status">asleep</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-between">
+                                Heartrate
+                                <span class="badge badge-ghost"><span class="countdown">
+                                        <span id="heart" style="--value: 0;"></span>
+                                    </span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-between">
+                                Avg Heartrate
+                                <span class="badge badge-ghost"><span class="countdown">
+                                        <span id="avg-heart" style="--value: 0;"></span>
+                                    </span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content text-center">
-            <div class="max-w-md">
-                <div class="avatar offline" id="avatar">
-                    <div class="w-24 rounded-full">
-                        <img src="./assets/favicon/apple-touch-icon.png" />
+    <div role="tablist" class="tabs tabs-lifted">
+        <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Site" checked />
+        <div role="tabpanel" class="tab-content">
+            <div class="hero min-h-screen bg-base-200">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold">Meet Katze.</h1>
+                        <p class="py-6">A Full-Stack Developer<br>and a Part-Time Gamer</p>
+                        <a class="btn btn-primary" href="#info">About Me</a>
                     </div>
                 </div>
-                <h1 class="text-5xl font-bold">Meet Katze.</h1>
-                <p class="py-6">A Full-Stack Developer<br>and a Part-Time Gamer</p>
-                <a class="btn btn-primary" href="#info">About Me</a>
             </div>
-        </div>
-    </div>
-
-    <div class="hero min-h-screen bg-base-200" id="info">
-        <div class="hero-content text-center">
-            <div class="max-w-md">
-                <div class="chat chat-start">
-                    <div class="chat-bubble">Tell me about yourself!</div>
-                </div>
-                <div class="chat chat-end">
-                    <div class="chat-bubble">I've always had a thing for computers ever since I could remember</div>
-                </div>
-                <div class="chat chat-end">
-                    <div class="chat-bubble">It's always been the software department that I have been attached to</div>
-                </div>
-                <div class="chat chat-end">
-                    <div class="chat-bubble">So here I am, working with Frontends and Backends almost every day!</div>
-                </div>
-                <div class="chat chat-start">
-                    <div class="chat-bubble">Thats cool, what do you work with?</div>
-                </div>
-                <div class="chat chat-end">
-                    <div class="chat-bubble">For the backend, I mostly use NodeJS, as I'm too scared to learn other
-                        languages at the moment.</div>
-                </div>
-                <div class="chat chat-end">
-                    <div class="chat-bubble">And for the frontend, I go with the classic, HTML, CSS, and JS<br>You can check out my work at my <a href="#github" class="link link-primary">GitHub</a></a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="hero min-h-screen bg-base-200" id="github">
-        <div class="hero-content text-center">
-            <div class="max-w-md">
-                <a href="https://github.com/de-katze">
-                    <div class="card w-96 bg-base-100 shadow-xl image-full">
-                        <figure><img src="./assets/etc/github.webp" alt="GitHub" /></figure>
-                        <div class="card-body">
-                          <h2 class="card-title">de-katze</h2>
-                          <p>The time at which something is most powerful or successful.</p>
-                          <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Go</button>
-                          </div>
+        
+            <div class="hero min-h-screen bg-base-200" id="info">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <div class="chat chat-start">
+                            <div class="chat-bubble">Tell me about yourself!</div>
                         </div>
-                      </div>
-                </a>
+                        <div class="chat chat-end">
+                            <div class="chat-bubble">I've always had a thing for computers ever since I could remember</div>
+                        </div>
+                        <div class="chat chat-end">
+                            <div class="chat-bubble">It's always been the software department that I have been attached to</div>
+                        </div>
+                        <div class="chat chat-end">
+                            <div class="chat-bubble">So here I am, working with Frontends and Backends almost every day!</div>
+                        </div>
+                        <div class="chat chat-start">
+                            <div class="chat-bubble">Thats cool, what do you work with?</div>
+                        </div>
+                        <div class="chat chat-end">
+                            <div class="chat-bubble">For the backend, I mostly use NodeJS, as I'm too scared to learn other
+                                languages at the moment.</div>
+                        </div>
+                        <div class="chat chat-end">
+                            <div class="chat-bubble">And for the frontend, I go with the classic, HTML, CSS, and JS<br>You can
+                                check out my work at my <a href="#github" class="link link-primary">GitHub</a></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="hero min-h-screen bg-base-200" id="github">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <a href="https://github.com/de-katze">
+                            <div class="card w-96 bg-base-100 shadow-xl image-full">
+                                <figure><img src="./assets/etc/github.webp" alt="GitHub" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">de-katze</h2>
+                                    <p>The time at which something is most powerful or successful.</p>
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">Go</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+      
+        <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Blog" />
+        <div role="tabpanel" class="tab-content">
+            <div class="hero min-h-screen bg-base-200">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">404</h1>
+                    <p class="py-6">This blog is still under the works, come back later.</p>
+                    <button class="btn btn-primary" onclick="(() => document.querySelector('div.tabs.tabs-lifted > input:nth-child(1)').checked = true)()">Return Home</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
 
-    <div class="btm-nav">
-        <button>
-            Local Time
-            <div class="badge">
-                <span class="countdown">
-                    <span id="hr" style="--value: 0;"></span>
-                </span>
-                :
-                <span class="countdown">
-                    <span id="min" style="--value: 0;"></span>
-                </span>
-                :
-                <span class="countdown">
-                    <span id="sec" style="--value: 0;"></span>
-                </span>
-            </div>
-        </button>
-        <button>
-            Status
-            <div class="badge" id="status">asleep</div>
-        </button>
-        <button>
-            Heartrate
-            <div class="badge">
-                <span class="countdown">
-                    <span id="heart" style="--value: 0;"></span>
-                </span>
-            </div>
-        </button>
-        <button>
-            Average Heartrate
-            <div class="badge">
-                <span class="countdown">
-                    <span id="avg-heart" style="--value: 0;"></span>
-                </span>
-            </div>
-        </button>
-    </div>
     <script src="./assets/index.js" type="module"></script>
 </body>
 

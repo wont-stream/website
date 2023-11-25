@@ -46,5 +46,5 @@ lanyard.onmessage = ({ data }) => {
 };
 
 const discord = (data) => {
-    avatar.classList = `avatar ${data.discord_status}`
+    avatar.classList = `btn btn-ghost btn-circle avatar ${data.discord_status}`
 }
