@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "daisyui": "latest",
-    "micro": "^10.0.1",
     "serve-handler": "latest",
     "tailwindcss": "latest"
   }
