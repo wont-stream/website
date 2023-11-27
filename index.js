@@ -15,6 +15,6 @@ exec = promisify(exec);
         cleanUrls: true,
         trailingSlash: false
     })).listen(3000, () => {
-        console.log(1)
+        console.log("Running at :3000")
     });
 })()
