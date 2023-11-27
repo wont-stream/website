@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tailwindcss -i ./tailwind.css -o ./public/assets/styles/tailwind.css -w",
     "build": "tailwindcss -i ./tailwind.css -o ./public/assets/styles/tailwind.css -m",
-    "start": "micro"
+    "start": "node ."
   },
   "dependencies": {
     "daisyui": "latest",
