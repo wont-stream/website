@@ -1,7 +1,4 @@
-const handler = require('serve-handler');
-const http = require('http');
-
-http.createServer(async (req, res) => await handler(req, res, {
+require("http").createServer(async (req, res) => await require("serve-handler")(req, res, {
     public: "public",
     cleanUrls: true,
     trailingSlash: false
