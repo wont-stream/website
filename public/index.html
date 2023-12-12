@@ -48,12 +48,17 @@ Cat Lover">
                 <a class="btn btn-ghost text-xl" href="#who">Katze</a>
             </div>
             <div class="flex-none">
-                <div class="dropdown dropdown-end">
-                </div>
+
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar" onclick="window.nav.blog()">
+                    <div class="w-10 rounded-full">
+                        <img alt="Profile Picture" src="./assets/etc/blog.png" />
+                    </div>
+                </label>
+
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar offline" id="avatar">
                         <div class="w-10 rounded-full">
-                            <img alt="Profile Picture" src="./assets/favicon/apple-touch-icon.png" />
+                            <img alt="Profile Picture" src="./assets/etc/pfp.png" />
                         </div>
                     </label>
                     <ul tabindex="0"
@@ -102,33 +107,21 @@ Cat Lover">
         </div>
     </div>
 
-    <div role="tablist" class="tabs tabs-lifted">
-        <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Site" checked />
-        <div role="tabpanel" class="tab-content">
-            <display-page page-id="meet"></display-page>
+    <span id="site">
+        <display-page page-id="meet"></display-page>
 
-            <div class="divider"></div> 
-        
-            <display-page page-id="info"></display-page>
+        <div class="divider"></div>
 
-            <div class="divider"></div> 
-        
-            <display-page page-id="github"></display-page>
-        </div>
-      
-        <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Blog" />
-        <div role="tabpanel" class="tab-content">
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content text-center">
-                  <div class="max-w-md">
-                    <h1 class="text-5xl font-bold">404</h1>
-                    <p class="py-6">This blog is still under the works, come back later.</p>
-                    <button class="btn btn-primary" onclick="(() => document.querySelector('div.tabs.tabs-lifted > input:nth-child(1)').checked = true)()">Return Home</button>
-                  </div>
-                </div>
-              </div>
-        </div>
-      </div>
+        <display-page page-id="info"></display-page>
+
+        <div class="divider"></div>
+
+        <display-page page-id="github"></display-page>
+    </span>
+
+    <span id="blog" style="display: none;">
+        <display-page page-id="blog"></display-page>
+    </span>
 
     <script src="./assets/index.js" type="module"></script>
 </body>
