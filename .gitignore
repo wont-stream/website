@@ -1,2 +1,3 @@
 node_modules/
 public/assets/styles/tailwind.css
+pnpm-lock.yaml
