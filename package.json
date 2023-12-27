@@ -9,6 +9,9 @@
     "docsify": "^4.13.1",
     "docsify-copy-code": "^3.0.0",
     "docsify-themeable": "^0.9.0",
-    "express": "^4.18.2"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-ws": "^5.0.2",
+    "ws": "^8.16.0"
   }
 }
