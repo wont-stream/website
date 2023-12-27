@@ -42,8 +42,9 @@ const time = () => {
 const discord = async() => {
     let data = await fetch("https://lanyard.rest/v1/users/1125315673829154837")
     data = await data.json()
+    data = data.data
 
-    document.getElementById("discord_data_discord_status").innerText = statuses[data.data.discord_status]
+    document.getElementById("discord_data_discord_status").innerText = statuses[data.discord_status]
 }
 
 const heartrate = async() => {
