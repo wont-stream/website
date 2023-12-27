@@ -1,1 +1,1 @@
-alert(1)
+location.hash = "#/"
