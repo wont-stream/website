@@ -40,34 +40,27 @@ const time = () => {
 }
 
 const discord = async() => {
-    const data = await fetch("https://lanyard.rest/v1/users/1125315673829154837")
+    let data = await fetch("https://lanyard.rest/v1/users/1125315673829154837")
+    data = await data.json()
 
-    document.getElementById("discord_data_discord_status").innerText = statuses[(await data.json()).data.discord_status]
+    document.getElementById("discord_data_discord_status").innerText = statuses[data.data.discord_status]
 }
 
-const heartrate = () => {
-        const ws = new WebSocket(`${(location.protocol).replace("http", "ws")}//${location.host}/heartrate`);
-    
-        ws.onmessage = (msg) => {
-            const data = JSON.parse(msg.data);
-            window.data = data
+const heartrate = async() => {
+    let html = '';
 
-            let html = '';
+    let data = await fetch(`${(location.protocol)}//${location.host}/api/heartrate`)
+    data = await data.json()
 
-            if (data.hr !== 0) {
-                html += "<br>"
-                html += `❤️: ${data.hr}`
-            }
+    if (data.hr !== 0) {
+        html += "<br>"
+        html += `❤️: ${data.hr}`
+    }
 
-            if (data.avg !== null) {
-                html += "<br>"
-                html += `💖: ${data.avg}`
-            }
+    if (data.avg !== null) {
+        html += "<br>"
+        html += `💖: ${data.avg}`
+    }
 
-            document.getElementById("hr").innerHTML = html
-        };
-    
-        ws.onclose = () => {
-            setTimeout(heartrate, 1000);
-        };
+    document.getElementById("hr").innerHTML = html
 }

@@ -7,8 +7,6 @@ const WebSocket = require("ws");
 
 const app = express()
 const expressWs = express_ws(app)
-const _sidebar_dot_md = sidebar()
-const _blog_sidebar_dot_md = sidebar.blog()
 
 let hr = 0
 const numbers = [];
@@ -78,20 +76,16 @@ app.use(express.static("static"))
 app.use(express.static("pages"))
 
 app.get("/_sidebar.md", (req, res) => {
-    res.send(_sidebar_dot_md)
+    res.send(sidebar())
 })
 
-app.get("/blog/_sidebar.md", (req, res) => {
-    res.send(_blog_sidebar_dot_md)
-})
-
-app.ws('/echo', function (ws, req) {
+app.ws('/api/echo', function (ws, req) {
     ws.on('message', function (msg) {
         ws.send(msg);
     });
 });
 
-app.ws('/heartrate', function (ws, req) {
+app.ws('/api/heartrate', function (ws, req) {
     clients.add(ws);
 
     const avg = Math.floor(numbers.reduce((acc, num) => acc + num, 0) / numbers.length)
@@ -103,6 +97,14 @@ app.ws('/heartrate', function (ws, req) {
     ws.on('close', () => {
         clients.delete(ws);
     });
+});
+
+app.get('/api/heartrate', function (req, res) {
+    const avg = Math.floor(numbers.reduce((acc, num) => acc + num, 0) / numbers.length)
+
+    const message = { hr, avg }
+
+    res.send(message)
 });
 
 
