@@ -7,6 +7,7 @@ import("../node_modules/docsify-copy-code/dist/docsify-copy-code.min.js");
 window.$docsify = {
     name: 'Katze <span id="discord_data_discord_status">⚫</span> <br> <span id="time">00:00</span> <span id="hr"></span> <img src="assets/etc/1x1.png" onload="window.$sidebarLoaded()" width="0px">',
 
+    loadNavbar: true,
     loadSidebar: true,
     subMaxLevel: Infinity,
     search: {

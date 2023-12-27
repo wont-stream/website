@@ -8,6 +8,7 @@ const WebSocket = require("ws");
 const app = express()
 const expressWs = express_ws(app)
 const _sidebar_dot_md = sidebar()
+const _blog_sidebar_dot_md = sidebar.blog()
 
 let hr = 0
 const numbers = [];
@@ -78,6 +79,10 @@ app.use(express.static("pages"))
 
 app.get("/_sidebar.md", (req, res) => {
     res.send(_sidebar_dot_md)
+})
+
+app.get("/blog/_sidebar.md", (req, res) => {
+    res.send(_blog_sidebar_dot_md)
 })
 
 app.ws('/echo', function (ws, req) {
