@@ -1,6 +1,7 @@
 import("../node_modules/docsify/lib/docsify.min.js");
-import("../node_modules/docsify/lib/plugins/search.min.js");
 import("../node_modules/docsify/lib/plugins/external-script.min.js");
+import("../node_modules/docsify/lib/plugins/search.min.js");
+import("../node_modules/docsify/lib/plugins/zoom-image.min.js");
 import("../node_modules/docsify-copy-code/dist/docsify-copy-code.min.js");
 
 window.$docsify = {
