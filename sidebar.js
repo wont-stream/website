@@ -1,5 +1,4 @@
 let items = [
-    //["HR","HR"]
     ["Home", "/"],
     ["About", "about/"],
 ]
