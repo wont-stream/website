@@ -55,10 +55,6 @@ function connectToHyperateWebSocket() {
     };
 }
 
-app.use(express.static("static"))
-
-app.use(express.static("pages"))
-
 app.get('/api/heartrate', function (req, res) {
     const avg = Math.floor(numbers.reduce((acc, num) => acc + num, 0) / numbers.length)
 
