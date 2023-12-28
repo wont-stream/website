@@ -2,7 +2,6 @@ require('dotenv').config()
 
 const express = require("express");
 const express_ws = require('express-ws');
-const sidebar = require("./sidebar")
 const WebSocket = require("ws");
 
 const app = express()
@@ -11,7 +10,6 @@ const expressWs = express_ws(app)
 let hr = 0
 const numbers = [];
 
-const clients = new Set();
 
 function connectToHyperateWebSocket() {
     const { token, seshid } = process.env;
@@ -49,18 +47,6 @@ function connectToHyperateWebSocket() {
         if (data.event === "hr_update") {
             hr = data.payload.hr;
             numbers.push(data.payload.hr)
-
-            const avg = Math.floor(numbers.reduce((acc, num) => acc + num, 0) / numbers.length)
-
-            const message = { hr, avg }
-            console.log(message)
-            for (const client of clients) {
-                if (client.readyState === WebSocket.OPEN) {
-                    client.send(JSON.stringify(message));
-                } else {
-                    clients.delete(client);
-                }
-            }
         }
     };
 
@@ -74,30 +60,6 @@ app.use("/node_modules", express.static("node_modules"))
 app.use(express.static("static"))
 
 app.use(express.static("pages"))
-
-app.get("/_sidebar.md", (req, res) => {
-    res.send(sidebar())
-})
-
-app.ws('/api/echo', function (ws, req) {
-    ws.on('message', function (msg) {
-        ws.send(msg);
-    });
-});
-
-app.ws('/api/heartrate', function (ws, req) {
-    clients.add(ws);
-
-    const avg = Math.floor(numbers.reduce((acc, num) => acc + num, 0) / numbers.length)
-
-    const message = { hr, avg }
-
-    ws.send(JSON.stringify(message))
-
-    ws.on('close', () => {
-        clients.delete(ws);
-    });
-});
 
 app.get('/api/heartrate', function (req, res) {
     const avg = Math.floor(numbers.reduce((acc, num) => acc + num, 0) / numbers.length)
