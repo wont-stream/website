@@ -1,8 +1,8 @@
-import("../node_modules/docsify/lib/docsify.min.js");
-import("../node_modules/docsify/lib/plugins/external-script.min.js");
-import("../node_modules/docsify/lib/plugins/search.min.js");
-import("../node_modules/docsify/lib/plugins/zoom-image.min.js");
-import("../node_modules/docsify-copy-code/dist/docsify-copy-code.min.js");
+import("https://esm.sh/docsify/lib/docsify.min.js");
+import("https://esm.sh/docsify/lib/plugins/external-script.min.js");
+import("https://esm.sh/docsify/lib/plugins/search.min.js");
+import("https://esm.sh/docsify/lib/plugins/zoom-image.min.js");
+import("https://esm.sh/docsify-copy-code/dist/docsify-copy-code.min.js");
 
 window.$docsify = {
     name: 'Katze <span id="discord_data_discord_status">⚫</span> <br> <span id="time">00:00</span> <span id="hr"></span> <img src="assets/etc/1x1.png" onload="window.$sidebarLoaded()" width="0px">',

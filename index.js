@@ -55,8 +55,6 @@ function connectToHyperateWebSocket() {
     };
 }
 
-app.use("/node_modules", express.static("node_modules"))
-
 app.use(express.static("static"))
 
 app.use(express.static("pages"))
